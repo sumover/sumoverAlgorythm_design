@@ -1,12 +1,18 @@
 #include <bits/stdc++.h>
-#include "bag_0_1.h"
+#include <ostream>
+#include "Huffman.h"
 
 int main(int argc, char **argv) {
-    int *weight, *price, N, size;
-    std::cin >> N >> size;
-    weight = new int[N], price = new int[N];
-    for (int i = 0; i < N; ++i)
-        scanf("%d%d", weight + i, price + i);
-    printf("%d\n",bag(size, weight, price, N));
+
+    double value;
+    char ch;
+    int N;
+    std::cin >> N;
+    std::map<char, double> map;
+    while (N--) {
+        std::cin >> ch >> value;
+        map[ch] = value;
+    }
+    huffman_print(build_huffman(map));
     return 0;
 }

@@ -1,4 +1,3 @@
-### 实验过程
 ```C++
 #include <bits/stdc++.h>
 using namespace std;
@@ -44,14 +43,11 @@ int main()
 }
 ```
 ### 运行结果
-
 #### input:
-
 ```text
 7 7
 1 2 3 4 5 1 6 6
 ```
-
 #### output:
 ```text
 4

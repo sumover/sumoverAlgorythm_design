@@ -62,6 +62,7 @@ Node *build_huffman(const std::map<char, double> &weight) {
 
 #include <stack>
 #include <iostream>
+#include <algorithm>
 
 std::string binary_print(int temp) {
     std::string string;
@@ -78,7 +79,6 @@ void huffman_print(const Node *root, const int temp = 0) {
     if (root->left->isChar())  // node of left tree is char
         std::cout << root->left->c << " : " << binary_print(temp) << std::endl;
     else huffman_print(root->left, temp << 1);
-
     if (root->right->isChar())  // node of right tree is char
         std::cout << root->right->c << " : " << binary_print(temp + 1) << std::endl;
     else huffman_print(root->right, (temp + 1) << 1);

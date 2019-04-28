@@ -1,9 +1,6 @@
-
-
 ### 实验过程
 ```C++
 #include <bits/stdc++.h>
-
 using namespace std;
 void Greed(int *cost, int n, int k)
 {
